@@ -1,0 +1,170 @@
+:root {
+    --primary-color: #1DB954;
+    --primary-hover-color: #1ed760;
+    --background-color: #121212;
+    --sidebar-background-color: #000000;
+    --content-background-color: #181818;
+    --text-color: #ffffff;
+    --secondary-text-color: #b3b3b3;
+    --border-color: #282828;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#app-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* --- Sidebar --- */
+#sidebar {
+    width: 230px;
+    background-color: var(--sidebar-background-color);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar .brand {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar li a {
+    display: block;
+    padding: 10px 0;
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+#sidebar li a:hover,
+#sidebar li a.active {
+    color: var(--text-color);
+}
+
+/* --- Main Content --- */
+#main-content {
+    flex-grow: 1;
+    background-color: var(--content-background-color);
+    overflow-y: auto;
+    padding: 20px 30px;
+    padding-bottom: 120px; /* Space for the footer player */
+}
+
+#search-header {
+    margin-bottom: 20px;
+}
+
+#search-container {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+}
+
+#search-bar {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background-color: #2e2e2e;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+#search-btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* --- Content Area (Results) --- */
+#content-area {
+    text-align: left;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.result-item {
+    background-color: #282828;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.result-item:hover {
+    background-color: #3a3a3a;
+}
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    margin: 0;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- Player Footer --- */
+#player-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: #1e1e1e;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#player-controls {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* #player is now just a container, no special styling needed */
+
+/* --- Utility Classes --- */
+.hidden {
+    display: none !important; /* Use important to ensure override */
+}

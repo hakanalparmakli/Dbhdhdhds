@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H-Sound</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <h1 class="brand">H-Sound</h1>
+            <ul>
+                <li><a href="#" id="home-link" class="active">Ana Sayfa</a></li>
+                <li><a href="#" id="search-link">Ara</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="main-content">
+            <header id="search-header" class="hidden">
+                <div id="search-container">
+                    <input type="text" id="search-bar" placeholder="Ne dinlemek istersin?">
+                    <button id="search-btn">Ara</button>
+                </div>
+            </header>
+            <main id="content-area">
+                <!-- Content (popular or search results) will be injected here -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Player Footer -->
+    <footer id="player-footer" class="hidden">
+        <div id="player-controls">
+            <div id="player"></div> <!-- YouTube player will be embedded here -->
+        </div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script> <!-- YouTube IFrame API -->
+    <script src="script.js"></script>
+</body>
+</html>
