@@ -5,48 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H-Sound</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="app">
-        <!-- Login and Registration Screen -->
-        <div id="auth-screen">
-            <h1>H-Sound</h1>
-            <div id="login-form">
-                <h2>Log In</h2>
-                <input type="text" id="login-username" placeholder="Username">
-                <input type="password" id="login-password" placeholder="Password">
-                <button id="login-btn">Log In</button>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="Logo">
+                </a>
             </div>
-            <hr>
-            <div id="register-form">
-                <h2>Create Account</h2>
-                <input type="text" id="register-username" placeholder="Username">
-                <input type="password" id="register-password" placeholder="Password">
-                <button id="register-btn">Create Account</button>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Your Library</a></li>
+                </ul>
+            </div>
+            <div class="policies">
+                <ul>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
             </div>
         </div>
-
-        <!-- Main Music Player -->
-        <div id="music-player" style="display: none;">
-            <header>
-                <h1>H-Sound</h1>
-                <div id="search-container">
+        <div class="main-content">
+            <div class="header">
+                <div class="search-container">
                     <input type="text" id="search-bar" placeholder="Search for a song...">
-                    <button id="search-btn">Search</button>
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
                 </div>
-            </header>
-            <main>
-                <div id="search-results">
-                    <!-- Search results will be dynamically added here -->
+                <div class="user-profile">
+                    <i class="fas fa-user"></i>
+                    <span>Hakan</span>
                 </div>
-            </main>
-            <footer>
-                <div id="player-controls">
-                    <audio id="audio-player" controls></audio>
-                </div>
-            </footer>
+            </div>
+            <div id="search-results">
+                <!-- Search results will be dynamically added here -->
+            </div>
         </div>
     </div>
+    <div class="footer">
+        <div id="player-container"></div>
+        <div id="error-message" style="display: none; color: red;"></div>
+    </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 </html>
