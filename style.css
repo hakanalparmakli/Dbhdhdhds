@@ -1,92 +1,143 @@
+/* General Body Styles */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #000;
+    width: 230px;
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    flex-direction: column;
 }
 
-#app {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-/* --- Authentication Screen --- */
-#auth-screen {
-    background-color: #1e1e1e;
-    padding: 40px;
-    border-radius: 10px;
-}
-
-#auth-screen h1 {
-    font-size: 3em;
-    margin-bottom: 30px;
-}
-
-#auth-screen input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #2e2e2e;
-    color: #fff;
-}
-
-#auth-screen button {
-    width: 100%;
-    padding: 12px;
-}
-
-/* --- Music Player --- */
-#music-player {
-    display: none;
-    width: 100%;
-}
-
-header {
+.sidebar .logo img {
+    width: 130px;
     margin-bottom: 20px;
 }
 
-#search-container {
+.sidebar .navigation ul, .sidebar .policies ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .navigation a, .sidebar .policies a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
     display: flex;
-    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    transition: color 0.2s;
+}
+
+.sidebar .navigation a:hover, .sidebar .policies a:hover {
+    color: #fff;
+}
+
+.sidebar .navigation a i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+.sidebar .policies {
+    margin-top: auto;
+}
+
+.sidebar .policies a {
+    font-size: 12px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    background-color: #121212;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    border-radius: 20px;
+    padding: 5px;
 }
 
 #search-bar {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px 0 0 5px;
-    background-color: #2e2e2e;
+    background: transparent;
+    border: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px;
+    width: 300px;
+}
+
+#search-bar::placeholder {
+    color: #b3b3b3;
 }
 
 #search-btn {
-    padding: 10px 20px;
-    border-radius: 0 5px 5px 0;
+    background: #1DB954;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-main {
-    margin-bottom: 20px;
+#search-btn i {
+    color: #fff;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile i {
+    font-size: 24px;
+    margin-right: 10px;
 }
 
 #search-results {
-    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .result-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    cursor: pointer;
+    background-color: #181818;
+    padding: 15px;
     border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
     transition: background-color 0.2s;
 }
 
@@ -95,45 +146,28 @@ main {
 }
 
 .result-item img {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
+    width: 100%;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1e1e1e;
-    padding: 10px 0;
+.result-item p {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Footer */
+.footer {
+    background-color: #181818;
+    padding: 15px;
     border-top: 1px solid #282828;
 }
 
-#player-controls {
+#player-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#audio-player {
-    width: 80%;
-    max-width: 600px;
-}
-
-/* --- General Button Style --- */
-button {
-    background-color: #1DB954;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-button:hover {
-    background-color: #1ed760;
 }
