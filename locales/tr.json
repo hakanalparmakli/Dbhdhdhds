@@ -1,0 +1,18 @@
+{
+    "home": "Ana Sayfa",
+    "search": "Ara",
+    "library": "Kitaplığım",
+    "settings": "Ayarlar",
+    "search_placeholder": "Ne dinlemek istersin?",
+    "search_button": "Ara",
+    "popular_music": "Popüler Müzikler",
+    "search_results": "Arama Sonuçları",
+    "my_library": "Kitaplığım",
+    "saved_songs_not_found": "Kaydedilmiş şarkı bulunamadı.",
+    "no_results_found": "Sonuç bulunamadı.",
+    "song_title_placeholder": "Şarkı Başlığı",
+    "artist_placeholder": "Sanatçı",
+    "playback_speed": "Oynatma Hızı",
+    "normal_speed": "Normal",
+    "language": "Dil"
+}
